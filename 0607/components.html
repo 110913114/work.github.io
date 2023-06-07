@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      /* accordion */
+      .accordion {
+        width: 500px;
+        margin: 100px auto;
+      }
+
+      .item {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        row-gap: 32px;
+        column-gap: 24px;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .number,
+      .text {
+        color: #3bc9db;
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .hidden-box {
+        grid-column: 2/3;
+      }
+
+      .hidden-box p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .hidden-box ul {
+        margin-left: 20px;
+        color: #adb5bd;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      /* carousel */
+      img {
+        height: 200px;
+        transform: scale(1.5);
+        border-radius: 10px;
+      }
+
+      .carousel {
+        background-color: #fcc419;
+        width: 800px;
+        margin: 100px auto;
+        color: #f1f3f5;
+        padding: 32px;
+        padding-left: 86px;
+        position: relative;
+        border-radius: 10px;
+
+        /* FLEX */
+        display: flex;
+        align-items: center;
+        gap: 80px;
+      }
+
+      .quote-text {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 32px;
+      }
+
+      .quote-author {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .quote-jpb {
+        font-size: 12px;
+      }
+
+      .btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn-icon {
+        width: 24px;
+        height: 24px;
+        stroke: #fcc419;
+      }
+
+      .btn-left {
+        left: 0;
+      }
+
+      .btn-right {
+        right: 0;
+      }
+
+      /* Table */
+      table {
+        width: 800px;
+        margin: 100px auto;
+        /* border: 1px solid #343a40; */
+        font-size: 18px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        /* border: 1px solid #343a40; */
+        text-align: left;
+        padding: 16px 24px;
+        width: 25%;
+      }
+
+      thead th {
+        background-color: rgb(27, 153, 111);
+        color: #fff;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: antiquewhite;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: rgb(162, 240, 240);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="accordion">
+      <div class="item">
+        <p class="number">02</p>
+        <p class="text">Incoporate the essential data</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A tenetur
+            veniam repellat quasi dolore architecto eos facere nostrum maiores
+            nulla commodi, illum quidem. Consequuntur, impedit? Repellendus
+            atque iure laboriosam dolorum!
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel">
+      <img src="dog.jpg" alt="dog" />
+      <blockquote class="quote">
+        <p class="quote-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut harum
+          fuga porro neque consectetur? Iste harum saepe accusantium esse
+          inventore tempore rerum deleniti. Nesciunt repudiandae tempore aliquid
+          repellat magnam adipisci.
+        </p>
+        <p class="quote-author">Dog</p>
+        <p class="quote-job">Model</p>
+      </blockquote>
+
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>chair</th>
+          <th>chair</th>
+          <th>chair</th>
+          <th>chair</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>width</th>
+          <th>50cm</th>
+          <th>50cm</th>
+          <th>50cm</th>
+        </tr>
+
+        <tr>
+          <th>width</th>
+          <th>50cm</th>
+          <th>50cm</th>
+          <th>50cm</th>
+        </tr>
+
+        <tr>
+          <th>width</th>
+          <th>50cm</th>
+          <th>50cm</th>
+          <th>50cm</th>
+        </tr>
+
+        <tr>
+          <th>width</th>
+          <th>50cm</th>
+          <th>50cm</th>
+          <th>50cm</th>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
